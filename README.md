@@ -35,9 +35,5 @@ y así.
 
 > No todos los homeworks tienen tests, está detallado en la descripción de cada uno. prueba de cambios 2.
 
-prueba de cambios 2.
-prueba de cambios 2.
-prueba de cambios 2.
-prueba de cambios 2.
-prueba de cambios 2.
+
 
