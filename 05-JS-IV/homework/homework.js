@@ -47,6 +47,8 @@ function agregarPropiedad(objeto, property) {
     console.log(objeto);
 
 
+    //objeto.listado = null;
+
     console.log (objeto[listado]=null);
 }
 
@@ -86,13 +88,16 @@ function eliminarPropiedad(objeto, unaPropiedad) {
   const objeto = 
   {
 
-    unaPropiedad:"nombre"
+    unaPropiedad:"nombre",
+    //otracosa: 1
   
   
   } 
-      objeto.unaPropiedad = null
+    delete objeto.unaPropiedad 
+    //  delete(objeto.unaPropiedad)
 
     console.log(objeto.unaPropiedad);
+   // console.log(objeto);
 }
 
 function nuevoUsuario(nombre, email, password) {
@@ -280,36 +285,57 @@ function sumarLikesDeUsuario(usuario) {
   // Suma todos los likes de todos los objetos "post"
   // Devuelve la suma
   // Tu código:
+ 
   var posts = 
-    [
-      
-      {
-       
-        post: 10
-          
-      },
-      {
-        post: 40
-       
-      },
-      {
-        post: 50
-      } 
+  [
     
-    ] 
-    //var sumados1 = posts.reduce((asd ,item) => {return Math.max(asd, item)});
-
-    //var sumados2 = posts.reduce((das ,asd) => {return das += asd.masnumero},0);
-    var sumados3 = posts.reduce((acc,objeto) => acc + objeto.post,0);
+    {
      
-    var resultado = posts.map(x => x.post);
-
-    var resultado2 = posts.filter(x => x.post)
-
-    var resultado3 = posts.find(x => x.post = 50)
-    //posts.find
+      post: 10
+        
+    },
+    {
+      post: 40
      
-      console.log(sumados3)
+    },
+    {
+      post: 50,
+      variable: 100
+    } 
+  
+  ] 
+  
+
+  //var numeros = [1,2,3,4,5]
+  //var sumados1 = posts.reduce((asd ,item) => {return Math.max(asd, item)});
+
+  //var sumados2 = posts.reduce((das ,asd) => {return das += asd.masnumero},0);
+  //var sumados3 = numeros.reduce(acc(numeros => numeros));
+  var sumados3 = posts.reduce(function(suma,posts){
+
+        return suma + posts.post
+ },0);
+   
+  //var resultado = posts.map(x => x.post);
+  var resultado = posts.map(function(posts){
+      //sumar cierto valor de cada numero se agrega un contador al lado de el elemento
+        return  posts.post 
+
+    })
+
+  var resultado2 = posts.filter(x => x.post)
+
+  var resultado3 = posts.find(function(post){
+
+      console.log(post.post)
+
+
+
+  })
+    
+
+  console.log(resultado2)
+
 }
 
 function agregarMetodoCalculoDescuento(producto) {

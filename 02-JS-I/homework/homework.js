@@ -96,7 +96,7 @@ function tienenMismaLongitud(str1, str2) {
   // De lo contrario, devuelve "false"
   // Tu código:
 
-    if (str1-length === str2-length) {
+    if (str1.length === str2.length) {
       return true;
     }else{
       return false;
@@ -258,7 +258,7 @@ function obtenerSaludo(nombre) {
 
     var hola = "hola";
 
-    return (hola, nombre);
+    return (hola,nombre);
   
 }
 
@@ -331,16 +331,56 @@ function esVocal(letra){
   // Si no es vocal, tambien debe devolver "Dato incorrecto".
   //Escribe tu código aquí
 
-    if (letra.length > 1) {
-      return "Dato incorrecto"
-    }
-    if (letra === "a"||letra === "e"||letra === "i"||letra === "o"||letra === "u"||letra === "A"||letra === "E"||letra === "I"||letra === "O"||letra === "U") {
-      return "Es vocal"
-    } else {
-      return "Dato incorrecto"
-    }
+ 
+  var letra = 'I'
+  var vocales = ['a','e','i','o','u','A','E','I','O',"U"]
+
+  if(letra.length > 1){
+
+      console.log('error esto incluye mas de una letra')
+      console.log('texto introducido:'+letra)
+  }
+
+  for(i = 0; i < vocales.length; i++){
+
+      
+      if(vocales[i].includes(letra)){
+
+
+
+          console.log("si tiene vocal y es "+vocales[i])
+
+          var letricas = vocales[i]
+          console.log(letricas)
+      }
+      
+      }
+
+///////////////esta es para las palabras enteras
+
+      var palabra = "palabraseo"
+      var vocales = ['a','e','i','o','u','A','E','I','O',"U"]
   
   
+      for(i = 0; i < palabra.length; i++){
+
+                  for(i = 0; i < vocales.length; i++){
+  
+                     if(palabra.includes(vocales[i])){
+  
+                      console.log("tiene a: "+ vocales[i])
+  
+                     }
+         
+  
+  
+           
+          }
+          
+      }
+    
+
+//////este es de busqueda en palabras generales
 
 
 }

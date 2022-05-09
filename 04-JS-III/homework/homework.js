@@ -1,11 +1,11 @@
 // No cambies los nombres de las funciones.
 
-function devolverPrimerElemento(array) {
+function devolverPrimerElemento() {
   // Devuelve el primer elemento de un  array (pasado por parametro)
   // Tu código:
 
   var listacosas = [1,2,3,4,5];
-  return[array[0]];
+  return[listacosas[0]];
 
 
 }
@@ -17,7 +17,7 @@ function devolverUltimoElemento(array) {
 
 
   var listacosas = [1,2,3,4,5];
-  return[array[array.length -1]];
+  return[listacosas[listacosas.length -1]];
 
 
 
@@ -226,12 +226,13 @@ function cuentoElementos(arreglo){
   //Escribe tu código aquí
 
 
-  var lista = []
-  var maximolista = 0
+  var lista = [1,2,3,4,5,6,7,8,1,1,1,1,1,1,1,1,1,1,1,1]
+  var maximolista = 20
   
-  for(var i = 0; i < 20; i++ ){
-
+  for(var i = 0; i < lista.length; i++ ){
+      
     if(lista.length[i] < maximolista)
+    
       i++;
      
       console.log(i)
@@ -239,9 +240,6 @@ function cuentoElementos(arreglo){
 
 }
 console.log("el maximo de elementos es: "+i)
-
-
-
 
 }
 
@@ -290,7 +288,7 @@ function empiezaConNueve(n) {
   //inicia con 9 y false en otro caso.
   //Escribe tu código aquí
 
-  numero = n.toString();
+  var numero = n.toString();
 
   if (numero.startsWith("9")){
     return true
@@ -326,18 +324,19 @@ function mesesDelAño(array) {
   //Si alguno de los meses no está, devolver: "No se encontraron los meses pedidos"
   // Tu código:
 
-  var todosmeses = ['enero','marzo','noviembre']
+  var todosmeses = ['enero','marzo','noviembre',]
   var nuevosmeses = [];
 
       if(todosmeses.includes('enero') && todosmeses.includes('marzo') && todosmeses.includes('noviembre')){
         console.log("si estan los meses")
+      }else{
+          console.log("no estan los meses")
       }
       var filtrado = todosmeses.filter(mes => mes = nuevosmeses)
 
   
         console.table(filtrado);
             
-
 
 }
 
@@ -352,7 +351,7 @@ function mayorACien(array) {
 
     var mayoresa100 = valores.filter(valor => valor > 100);
 
-    console.table(mayoresa100);
+    console.table(mayoresa100.sort());
 
 
 }
