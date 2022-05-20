@@ -123,25 +123,19 @@ function map(array, cb) {
   var cb = []
   var nuevalista = []
   
+  
+  for(i = 0; i < listado.length; i++){
+    cb.push(listado[i])
+    nuevalista.push(cb[i])
 
+   }
+   if(cb.length == nuevalista.length){
 
-  mapeado = listado.map(valores => cb.push(valores))
-       
- 
-        
-        nuevalista = cb   
-
- 
-
-  if (cb.length === nuevalista.length){
-
-    console.log('el array es igual a :'+nuevalista.length)
-
-   
-  }  
-  console.log(nuevalista)
-
-
+    console.log("el valor de la longitud es igual cb:"+cb.length+' nuevalista:'+nuevalista.length )
+  }else{
+    console.log("el valor de la longitud no es cb:"+cb.length+' nuevalista:'+nuevalista.length )
+  
+  }
 
 }
 
@@ -159,17 +153,19 @@ function filter(array) {
 
       if(elemento[0].includes('a') || elemento[0].includes('A')){
         
-
         filtro.push(elemento)
-
-
       }
 
-
-
-       
-
   })
+ 
+  // var listado = ['america','Amazon','destruccion','camion','Amazonia']
+  // var filtro = []
+  // var uper = listado.map(e => e.toUpperCase())
+   
+  // uper.filter(e => e[0] === "A"? filtro.push(e):  console.log("X") )
+
+  // console.log(filtro)
+
 
   console.log(filtro)
   

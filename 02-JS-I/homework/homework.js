@@ -245,7 +245,7 @@ function combinarNombres(nombre, apellido) {
   // Devuelve "nombre" y "apellido" combinados en una string y separados por un espacio.
   // Ejemplo: "Soy", "Henry" -> "Soy Henry"
   // Tu código:
-    var saludo = (nombre, apellido);
+    var saludo = (nombre + " "+apellido);
 
       return (saludo);
   
@@ -258,7 +258,7 @@ function obtenerSaludo(nombre) {
 
     var hola = "hola";
 
-    return (hola,nombre);
+    return (hola+ " "+nombre);
   
 }
 

@@ -268,7 +268,7 @@ function pasarUsuarioAPremium(usuarios) {
   //adecuado para cambio de info .map
   //var resultado = usuarios.map( x => x.usuario = false);
   
-  var resultado = usuarios.map( x => x.usuario = false);
+  var resultado = usuarios.map( x => x.usuario = true);
 
   console.log(usuarios)
 

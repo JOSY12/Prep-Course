@@ -126,13 +126,12 @@ function arrayContiene(array, elemento) {
   // Devuelve "true" si está, o "false" si no está
   // Tu código:
 
+var frutas = [1,2];
+          var elemento = 5;
 
-        var frutas = [1,2];
-
-          if(array.frutas.includes(elemento)){
-            return true;
-          }else
-          return false;
+         var ojo = frutas.map(e => e === elemento ? true: false)
+             
+          console.log(ojo)
       
 
 }
@@ -225,21 +224,21 @@ function cuentoElementos(arreglo){
   //Realiza una función que retorne la cantidad de los elementos del arreglo cuyo valor es mayor a 18.
   //Escribe tu código aquí
 
+  var lista = [1,2,3,4,555,66,77,8,]
+  var contenedor = []
+  var contador = 0
 
-  var lista = [1,2,3,4,5,6,7,8,1,1,1,1,1,1,1,1,1,1,1,1]
-  var maximolista = 20
-  
   for(var i = 0; i < lista.length; i++ ){
       
-    if(lista.length[i] < maximolista)
+    if(lista[i] > 18){
+      contenedor.push(lista[i])
+      
+      contador++
+    }
     
-      i++;
-     
-      console.log(i)
-
 
 }
-console.log("el maximo de elementos es: "+i)
+console.log("el maximo de elementos mayor a 18 es: "+contador+" y estos son "+contenedor)
 
 }
 
@@ -287,14 +286,18 @@ function empiezaConNueve(n) {
   //Desarrolle una función que recibe como parámetro un número entero n. Debe retornar true si el entero 
   //inicia con 9 y false en otro caso.
   //Escribe tu código aquí
-
+  var n =  933122
   var numero = n.toString();
 
-  if (numero.startsWith("9")){
-    return true
+  console.log(numero)
+  if (numero.startsWith( "9")){
+     
+    console.log('numero es 9')
+  }else{
+     
+    console.log('numero no es 9')
+   
   }
-  return false
-
   
 }
 
@@ -304,11 +307,16 @@ function todosIguales(arreglo) {
   //retornar true, caso contrario retornar false.
   //Escribe tu código aquí  
 
-  var numeros = ["1","2"];
+  var numeros = ["1","1","1"];
 
-  if(numeros.every( e => numeros[0] == e)){
+  if(numeros.every( e => e == numeros[0])){
+    console.log(numeros)
+    console.log('es igual')
     return true;
   }else {
+    console.log(numeros)
+    console.log('no es igual')
+    
     return false;
   }
 

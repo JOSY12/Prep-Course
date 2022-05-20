@@ -54,7 +54,7 @@ function conection(status) {
   }else {
     return "Offline";
   }
-
+// otra forma de hacerse con if en vez de switch
  
 
 }
