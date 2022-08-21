@@ -8,42 +8,22 @@ function crearUsuario() {
   // Devuelve la clase
   // Tu código:
 
-
-  class usuarios{
-
-  
-    constructor(nombre,email,password,usuario){
-
-
-        this.nombre = nombre;
-        this.usuario = usuario;
-        this.email = email;
-        this.password = password;
-
+  class usuarios {
+    constructor(nombre, email, password, usuario) {
+      this.nombre = nombre;
+      this.usuario = usuario;
+      this.email = email;
+      this.password = password;
     }
 
-    saludar(){
-
-            console.log("hola, usuario "+this.nombre+" email:"+this.email)
-
+    saludar() {
+      console.log("hola, usuario " + this.nombre + " email:" + this.email);
     }
+  }
 
- 
-}
+  const usuario = new usuarios("Josmer", null);
 
-const usuario = new usuarios("Josmer",null)
-
-console.log(usuario.saludar())
- 
-
-        
-
-    
-
-
-    
-
-
+  console.log(usuario.saludar());
 }
 
 function agregarMetodoPrototype(Constructor) {
@@ -51,28 +31,17 @@ function agregarMetodoPrototype(Constructor) {
   // El método debe llamarse "saludar" y debe devolver la string "Hello World!"
   // Tu código:
 
+  class proto {
+    constructor() {}
+  }
+  proto.prototype.saludo = function () {
+    console.log("hola mundo");
+  };
+  var muestra = new proto();
 
-  class proto{
+  muestra.saludo();
 
-    constructor(){
-
-     
-    }
-
-
-}
-proto.prototype.saludo = function(){
-
-    console.log("hola mundo")
-
-
-}
-var muestra = new proto()
-
-
-muestra.saludo()
-
-//funcional todo los metodos aqui 2 de 2
+  //funcional todo los metodos aqui 2 de 2
 }
 
 function agregarStringInvertida() {
@@ -83,74 +52,54 @@ function agregarStringInvertida() {
   // Pista: Necesitarás usar "this" dentro de "reverse"
 
   class revertido {
-
-    constructor(frase){
-        this.frase = frase;
-     
-
+    constructor(frase) {
+      this.frase = frase;
     }
-    
- 
-    }   
-    revertido.prototype.revertidor = function(){
-
-
-      
-      var  convertida = this.frase.split("")
-
-    var finalizada = convertida.reverse().join("")
-
-    console.log(finalizada)
-
   }
+  revertido.prototype.revertidor = function () {
+    var convertida = this.frase.split("");
 
- 
+    var finalizada = convertida.reverse().join("");
+
+    console.log(finalizada);
+  };
 }
 
 // ---------------------------------------------------------------------------//
-  //Crea el constructor de la clase "Persona"
-  //Debe tener las propiedades: "nombre", "apellido", "edad" y "domicilio"
-  //Debe tener un método llamado "detalle" que nos devuelve un objeto con las propiedades de la persona y sus valores.
-  //Ej: { 
-    //   Nombre: 'Juan',
-    //   Apellido: 'Perez',
-    //   Edad: 22,
-    //   Domicilio: 'Saavedra 123'
-    //  }
+//Crea el constructor de la clase "Persona"
+//Debe tener las propiedades: "nombre", "apellido", "edad" y "domicilio"
+//Debe tener un método llamado "detalle" que nos devuelve un objeto con las propiedades de la persona y sus valores.
+//Ej: {
+//   Nombre: 'Juan',
+//   Apellido: 'Perez',
+//   Edad: 22,
+//   Domicilio: 'Saavedra 123'
+//  }
 
-    function prueba(){
+function prueba() {
+  class Persona {
+    constructor(nombre, apellido, edad, domicilio) {
+      this.nombre = nombre;
+      this.apellido = apellido;
+      this.edad = edad;
+      this.domicilio = domicilio;
+    }
 
-      class Persona {
-          constructor(nombre,apellido,edad,domicilio) {
-                  this.nombre = nombre
-                  this.apellido = apellido
-                  this.edad = edad
-                  this.domicilio = domicilio
-          }
-  
-          detalle(){
-  
-              var cosas = {
-  
-                  nombre: this.nombre,
-                  apellido: this.apellido,
-                  edad: this.edad,
-                  domicilio: this.domicilio
-  
-              }
-                
-          
-              console.log(cosas)
-              
-          }
-  
-         
-      
-      }
-       
-      resultado = new Persona("","","","");
-  
-      resultado.detalle()
+    detalle() {
+      var cosas = {
+        nombre: this.nombre,
+        apellido: this.apellido,
+        edad: this.edad,
+        domicilio: this.domicilio,
+      };
+
+      console.log(cosas);
+    }
+  }
+
+  resultado = new Persona("", "", "", "");
+
+  resultado.detalle();
 }
 
 function crearInstanciaPersona(nombre, apellido, edad, dir) {
@@ -158,60 +107,39 @@ function crearInstanciaPersona(nombre, apellido, edad, dir) {
   //Recibirá los valores "Juan", "Perez", 22, "Saavedra 123" para sus respectivas propiedades
   //Devolver la nueva persona creada
 
-  
-  class persona{
-
-    constructor(nombre,apellido,edad,dir){
-
-            this.nombre = nombre
-            this.apellido = apellido
-            this.edad = edad
-            this.dir = dir
-
+  class persona {
+    constructor(nombre, apellido, edad, dir) {
+      this.nombre = nombre;
+      this.apellido = apellido;
+      this.edad = edad;
+      this.dir = dir;
     }
-
   }
 
+  var personacreada = new persona("juan", "perez", 22, "123");
 
-var personacreada = new persona('juan','perez',22,'123')
-
-console.log(personacreada)
+  console.log(personacreada);
 }
-  
+
 function agregarMetodo() {
-  //La función agrega un método "datos" a la clase Persona que toma el nombre y la edad de la persona y devuelve: 
+  //La función agrega un método "datos" a la clase Persona que toma el nombre y la edad de la persona y devuelve:
   //Ej: "Juan, 22 años"
 
-
   class persona {
-
-    constructor(nombre,edad){
-        
-        this.nombre = nombre
-        this.edad = edad
-
-
+    constructor(nombre, edad) {
+      this.nombre = nombre;
+      this.edad = edad;
     }
 
-    datos(){
-
-    
-        console.log(this.nombre,this.edad)
-
-
+    datos() {
+      console.log(this.nombre, this.edad);
     }
+  }
 
+  var retorna = new persona("juan", 22);
 
-
-}       
-
-var retorna = new persona('juan',22)
-
-retorna.datos();
-
-
+  retorna.datos();
 }
-  
 
 // No modificar nada debajo de esta línea
 // --------------------------------
@@ -221,6 +149,6 @@ module.exports = {
   agregarMetodoPrototype,
   agregarStringInvertida,
   crearInstanciaPersona,
-  agregarMetodo, 
-  Persona
+  agregarMetodo,
+  Persona,
 };
