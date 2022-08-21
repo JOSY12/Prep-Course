@@ -380,7 +380,7 @@ function breakStatement(numero) {
   for(i = 0; i < 10; i++){
 
     numero = numero+2
-    if(i = numero){
+    if(i === numero){
       console.log("Se interrumpió la ejecución el valor de i: "+i+" y el valor de el numero sumado 2 es: "+numero)
       break;
     }

@@ -1,5 +1,4 @@
-// Do not change any of the function names
-
+ 
 function mayuscula(nombre) {
   //La función recibe un nombre y debe devolver el mismo que recibe pero con su primer letra en mayúscula
   //ej: Recibe "mario" ----> Devuelve "Mario"
@@ -31,13 +30,8 @@ function invocarCallback(cb) {
   // Invoca al callback `cb`
   //Tu código:
 
-
-  return cb
-
-
-
-}
-function call(cb){
+ 
+ 
   return cb(cb)
 
 }
@@ -47,13 +41,7 @@ function operacionMatematica(n1, n2, cb) {
   //Devolver el callback pasándole como argumentos los números recibidos.
   //Tu código:
 
-     var sumados = n1+n2
-
-     console.log(sumados)
-
-}
-  function cb1(n1,n2,cb){
-    return cb(n1,n2)
+   cb(n1,n2)
 
   }
 ///TODA ESTA SE SOLICIONA CON UN REDUCE PERO AQUI FUNCIONA IGUAL
@@ -82,6 +70,7 @@ function sumarArray(listado) {
         }
 
   }
+  cb(sumados)
 
   console.log(sumados) 
 
@@ -139,7 +128,7 @@ function map(array, cb) {
 
 }
 
-function filter(array) {
+function filter() {
   //Filtrar todos los elementos del array que comiencen con la letra "a".
   //Devolver un nuevo array con los elementos que cumplen la condición
   //Tu código:
@@ -149,15 +138,17 @@ function filter(array) {
   var listado = ['america','Amazon','destruccion','camion','Amazonia']
   var filtro = []
 
-  var filtrado = listado.filter(function(elemento){
-
-      if(elemento[0].includes('a') || elemento[0].includes('A')){
-        
-        filtro.push(elemento)
-      }
-
-  })
+   var mayus = listado.map((e) => e.toLowerCase())
  
+   var filtrado = mayus.filter((e)=> e[0] === "a" ? filtro.push(e):false)
+ 
+      // if(elemento[0].includes('a') || elemento[0].includes('A')){
+        
+      //   filtro.push(elemento)
+      // }
+
+   
+  
   // var listado = ['america','Amazon','destruccion','camion','Amazonia']
   // var filtro = []
   // var uper = listado.map(e => e.toUpperCase())
@@ -167,10 +158,10 @@ function filter(array) {
   // console.log(filtro)
 
 
-  console.log(filtro)
+  console.log(filtrado)
   
 }
-
+filter()
 // No modificar nada debajo de esta línea
 // --------------------------------
 

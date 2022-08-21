@@ -148,7 +148,7 @@ function esPar(num) {
   return false;
 }
 
-function esImpar(num) {
+function esImpar(num){
   // Devuelve "true" si "num" es impar
   // De lo contrario, devuelve "false"
   // Tu código:
@@ -158,16 +158,16 @@ function esImpar(num) {
     return false;
   
 }
-
+}
 function elevarAlCuadrado(num) {
   // Devuelve el valor de "num" elevado al cuadrado
   // ojo: No es raiz cuadrada!
   // Tu código:
-  return Math.pow(num,2);
-
+  
+  console.log(Math.pow(num,2))
   
 }
-
+ 
 function elevarAlCubo(num) {
   // Devuelve el valor de "num" elevado al cubo
   // Tu código:
@@ -230,7 +230,7 @@ function esPositivo(numero) {
    
         
 }
-
+esPositivo(-1)
 function agregarSimboloExclamacion(str) {
   // Agrega un símbolo de exclamación al final de la string "str" y devuelve una nueva string
   // Ejemplo: "hello world" pasaría a ser "hello world!"
@@ -266,7 +266,7 @@ function obtenerAreaRectangulo(alto, ancho) {
   // Retornar el area de un rectángulo teniendo su altura y ancho
   // Tu código:
 
-    function arearectangulo(alto,ancho);{
+    function arearectangulo(alto,ancho) {
 
       var arearec = (alto*ancho);
       return arearec;
@@ -292,7 +292,7 @@ function retornarPerimetro(lado){
    
  
 }
-}
+ 
 
 
 function areaDelTriangulo(base, altura){
@@ -332,29 +332,29 @@ function esVocal(letra){
   //Escribe tu código aquí
 
  
-  var letra = 'I'
-  var vocales = ['a','e','i','o','u','A','E','I','O',"U"]
+   
+  // var vocales = ['a','e','i','o','u','A','E','I','O',"U"]
 
-  if(letra.length > 1){
+  // if(letra.length > 1){
 
-      console.log('error esto incluye mas de una letra')
-      console.log('texto introducido:'+letra)
-  }
+  //     console.log('error esto incluye mas de una letra')
+  //     console.log('texto introducido:'+letra)
+  // }
 
-  for(i = 0; i < vocales.length; i++){
+  // for(i = 0; i < vocales.length; i++){
 
       
-      if(vocales[i].includes(letra)){
+  //     if(vocales[i].includes(letra)){
 
 
 
-          console.log("si tiene vocal y es "+vocales[i])
+  //         console.log("si tiene vocal y es "+vocales[i])
 
-          var letricas = vocales[i]
-          console.log(letricas)
-      }
+  //         var letricas = vocales[i]
+  //         console.log(letricas)
+  //     }
       
-      }
+  //     }
 
 ///////////////esta es para las palabras enteras
 
@@ -384,7 +384,7 @@ function esVocal(letra){
 
 
 }
-
+esVocal()
 
 
 

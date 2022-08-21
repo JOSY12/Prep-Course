@@ -56,13 +56,7 @@ function agregarMetodoPrototype(Constructor) {
 
     constructor(){
 
-        // this.metodo = function(){
-
-        //     console.log("hola mundo")
-
-
-        // }
-
+     
     }
 
 
@@ -96,29 +90,21 @@ function agregarStringInvertida() {
 
     }
     
-
-    
-    revertidor(){
+ 
+    }   
+    revertido.prototype.revertidor = function(){
 
 
       
-        var  convertida = this.frase.split("")
+      var  convertida = this.frase.split("")
 
-      var finalizada = convertida.reverse().join("")
+    var finalizada = convertida.reverse().join("")
 
-      console.log(finalizada)
+    console.log(finalizada)
 
-    }
+  }
 
-    }   
-
-
-    
-    var palabra = new revertido('frase')
-    palabra.revertidor()
-
-
-
+ 
 }
 
 // ---------------------------------------------------------------------------//

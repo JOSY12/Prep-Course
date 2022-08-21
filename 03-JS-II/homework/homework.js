@@ -24,12 +24,11 @@ function mayoriaDeEdad(edad) {
   }else{
     return  "Not allowed";
   }
-
-
-
-  
+ 
 }
-  
+ 
+
+
 function conection(status) {
   //Recibimos un estado de conexión de un usuario representado por un valor numérico. 
   //Cuando el estado es igual a 1, el usuario está "Online"
@@ -58,7 +57,7 @@ function conection(status) {
  
 
 }
-
+ 
 function saludo(idioma) {
   // Devuelve un saludo en tres diferentes lenguajes:
   // Si "idioma" es "aleman", devuelve "Guten Tag!"
@@ -85,7 +84,7 @@ switch(idioma){
 
 
 }
-
+ 
 function colors(color) {
   //La función recibe un color. Devolver el string correspondiente:
   //En caso que el color recibido sea "blue", devuleve --> "This is blue"
@@ -127,7 +126,7 @@ function esDiezOCinco(numero) {
   
 
 }
-
+ 
 function estaEnRango(numero) {
   // Devuelve "true" si "numero" es menor que 50 y mayor que 20
   // De lo contrario, devuelve "false"
@@ -160,7 +159,8 @@ function esEntero(numero) {
   }
 
 
-}
+} 
+ 
 
 function fizzBuzz(numero) {
   // Si "numero" es divisible entre 3, devuelve "fizz"
@@ -246,16 +246,16 @@ function esVerdadero(valor){
 
 }
 
-function tablaDelSeis(){
+function tablaDelSeis(numero){
   //Escribe una función que muestre la tabla de multiplicar del 6 (del 0 al 60).
   //La función devuelve un array con los resultados de la tabla de multiplicar del 6 en orden creciente.
   //Escribe tu código aquí   
 
-  var numero6 =6;
+   
   var multiplimax =10;
  for (let i = 1; i <= multiplimax; i++){
       
-      var resultado = numero6*i;
+      var resultado = numero*i;
       console.log(resultado) ;
      
     }
@@ -264,7 +264,7 @@ function tablaDelSeis(){
 
   
 }
-
+ 
 function tieneTresDigitos(numero){
   //Leer un número entero y retornar true si tiene 3 dígitos. Caso contrario, retorna false.
   //Escribe tu código aquí
